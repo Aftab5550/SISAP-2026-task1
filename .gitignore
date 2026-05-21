@@ -1,0 +1,17 @@
+# IDEs
+.vscode/
+
+# Build artifacts
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Data and Results (Never upload massive H5 files)
+data/
+results/
+
+# Python caches
+__pycache__/
+*.pyc
