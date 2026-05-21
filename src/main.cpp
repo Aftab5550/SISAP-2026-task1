@@ -452,6 +452,8 @@ int main(int argc, char** argv) {
             final_knns[i * K_EVAL + k] = knn_graph[i * K_BUILD + k].id + 1;
             final_dists[i * K_EVAL + k] = static_cast<float>(knn_graph[i * K_BUILD + k].score);
         }
+        reverse(final_knns.begin() + (i * K_EVAL), final_knns.begin() + (i * K_EVAL) + K_EVAL);
+        reverse(final_dists.begin() + (i * K_EVAL), final_dists.begin() + (i * K_EVAL) + K_EVAL);
     }
 
     mkdir("results", 0777);
